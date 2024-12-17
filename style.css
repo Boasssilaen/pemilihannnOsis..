@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: coral;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    height: 80vh;
+    overflow-y: auto;
+
+
+    
+}
+
+.candidates {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.candidate {
+    text-align: center;
+}
+
+.candidate img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#results {
+    margin-top: 20px;
+    font-size: 18px;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemilihan Ketua OSIS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pemilihan Ketua OSIS</h1>
+        <p>Pilih Salah Satu Kandidat di Bawah ini:</p>
+        
+        <div class="candidates">
+            <div class="candidate">
+                <img src="intan.jpg" alt="Kandidat 1">
+                <h2>Intan (01)</h2>
+                <button onclick="vote(1)">Pilih</button>
+            </div>
+            <div class="candidate">
+                <img src="Angga.jpg" alt="Kandidat 2">
+                <h2>Angga (02)</h2>
+                <button onclick="vote(2)">Pilih</button>
+            </div>
+            <div class="candidate">
+                <img src="brandon.jpg" alt="Kandidat 3">
+                <h2>Brandon (03)</h2>
+                <button onclick="vote(3)">Pilih</button>
+            </div>
+        </div>
+
+        
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visi dan Misi Kandidat Ketua OSIS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:burlywood;
+            padding: 20px;
+        }
+
+        .candidate {
+            background-color: yellowgreen;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .candidate h2 {
+            color: #007bff;
+        }
+
+        .candidate ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Visi dan Misi Calon Ketua OSIS</h1>
+
+    <div class="candidate">
+        <h2>Calon 01: Intan</h2>
+        <p><strong>Visi:</strong> Menjadikan OSIS sebagai organisasi yang inspiratif, inovatif, dan mampu meningkatkan kualitas siswa baik dalam akademik maupun non-akademik.</p>
+        <p><strong>Misi:</strong></p>
+        <ul>
+            <li>Membuat program kerja yang berfokus pada pengembangan bakat dan minat siswa.</li>
+            <li>Meningkatkan kolaborasi antarorganisasi sekolah untuk menciptakan kegiatan yang lebih variatif.</li>
+            <li>Mendorong budaya literasi dan prestasi akademik di lingkungan sekolah.</li>
+            <li>Mengadakan kegiatan sosial untuk mempererat solidaritas antar siswa.</li>
+            <li>Memberikan ruang lebih bagi siswa untuk menyampaikan ide dan aspirasi.</li>
+        </ul>
+    </div>
+
+    <div class="candidate">
+        <h2>Calon 02: Angga</h2>
+        <p><strong>Visi:</strong> Memimpin dengan transparansi, bekerja dengan dedikasi, dan menciptakan lingkungan sekolah yang nyaman, adil, dan harmonis.</p>
+        <p><strong>Misi:</strong></p>
+        <ul>
+            <li>Membangun komunikasi terbuka antara siswa, OSIS, dan pihak sekolah.</li>
+            <li>Mengadakan kegiatan yang melibatkan seluruh siswa tanpa diskriminasi.</li>
+            <li>Mengembangkan program lingkungan hidup seperti sekolah hijau dan daur ulang sampah.</li>
+            <li>Memperkuat solidaritas melalui program yang berbasis tim, seperti olahraga dan seni.</li>
+            <li>Mengoptimalkan fasilitas sekolah untuk mendukung proses belajar-mengajar.</li>
+        </ul>
+    </div>
+
+    <div class="candidate">
+        <h2>Calon 03: Brandon </h2>
+        <p><strong>Visi:</strong> Mewujudkan OSIS sebagai motor penggerak inovasi dan wadah pengembangan karakter siswa yang kreatif, tangguh, dan bertanggung jawab.</p>
+        <p><strong>Misi:</strong></p>
+        <ul>
+            <li>Menyelenggarakan pelatihan kepemimpinan dan pengembangan diri untuk siswa.</li>
+            <li>Mengadakan kegiatan kreatif, seperti lomba seni dan teknologi, untuk memupuk inovasi.</li>
+            <li>Meningkatkan partisipasi siswa dalam kegiatan sosial, seperti donasi atau bakti sosial.</li>
+            <li>Memperjuangkan aspirasi siswa melalui forum komunikasi secara berkala.</li>
+            <li>Meningkatkan kerja sama dengan pihak eksternal, seperti komunitas dan organisasi lain.</li>
+        </ul>
+    </div>
+    <div>
+        <h3>Hasil Pemilihan Suara:</h3>
+        <div id="results">
+            <p>Kandidat 1: <span id="votes1">0</span> suara</p>
+            <p>Kandidat 2: <span id="votes2">0</span> suara</p>
+            <p>Kandidat 3: <span id="votes3">0</span> suara</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang Di Website Pemlihan Ketua Osis Boas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: red;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: chocolate;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .form-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Silahkan Masukkan Nama dan ID Anda</h1>
+        <form id="formPemilih" onsubmit="submitForm(event)">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" placeholder="Masukkan ID Anda" required>
+        <center>
+            <button type="submit"><h1><a href="tampilan2.html"></h1>LANJUTKAN</button>
+        </center>        
+        </form>
+    </div>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Mencegah reload halaman
+            const nama = document.getElementById('nama').value;
+            const id = document.getElementById('id').value;
+
+            if (nama && id) {
+                // Simpan data ke localStorage untuk digunakan di halaman berikutnya
+                localStorage.setItem('nama', nama);
+                localStorage.setItem('id', id);
+
+                // Arahkan ke halaman berikutnya (misalnya: halaman pemilihan)
+                window.location.href = 'pemilihan.html';
+            } else {
+                alert('Mohon lengkapi semua field!');
+            }
+        }
+    </script>
+</body>
+</html>
