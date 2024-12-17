@@ -1,16 +1,18 @@
-// Inisialisasi jumlah suara
-let votes = [0, 0, 0];
+let currentLight = 0;
 
-// Fungsi untuk mencatat suara
-function vote(candidate) {
-    // Tambahkan suara untuk kandidat yang dipilih
-    votes[candidate - 1]++;
-    
-    // Perbarui hasil di layar
-    document.getElementById(`votes1`).textContent = votes[0];
-    document.getElementById(`votes2`).textContent = votes[1];
-    document.getElementById(`votes3`).textContent = votes[2];
-    
-    // Tampilkan pesan sukses
-    alert(`Anda telah memilih Kandidat ${candidate}. Terima kasih atas partisipasi Anda!`);
+const lights = document.querySelectorAll('.light');
+
+// Fungsi untuk menyalakan lampu sesuai urutan
+function changeLight() {
+    // Matikan semua lampu terlebih dahulu
+    lights.forEach(light => light.style.opacity = '0.3');
+
+    // Nyalakan lampu sesuai urutan
+    lights[currentLight].style.opacity = '1';
+
+    // Pindah ke lampu berikutnya
+    currentLight = (currentLight + 1) % lights.length;
 }
+
+// Atur interval untuk mengganti lampu setiap detik
+setInterval(changeLight, 1000);
